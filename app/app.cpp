@@ -28,7 +28,7 @@ namespace vsite::oop::v2
     };
 
     unsigned color::get_color_ref() const {
-        return RGB(255 * this->red, 255 * this->green, 255 * this->blue);
+        return RGB(255 * red, 255 * green, 255 * blue);
     };
 
     double color::get_luminance() const {
