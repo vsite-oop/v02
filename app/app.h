@@ -15,15 +15,22 @@ namespace vsite::oop::v2
 		double green = 0;
 		double blue = 0;
 	public:
-		//get
+		//******get*******
 		double get_red() const;
 		double get_green() const;
 		double get_blue() const;
 
-		//set
+		//*******set********
 		void set_red(double value);
 		void set_green(double value);
 		void set_blue(double value);
+
+		//*******color ref*******
+		unsigned get_color_ref();
+
+
+		//********get luminance*******
+		double get_luminance();
 	};
 
 }

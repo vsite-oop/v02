@@ -7,7 +7,7 @@ namespace vsite::oop::v2
 	* class member function implementations
 	*/
 
-	//get
+	//******get*******
 	double color::get_red() const {
 		return red;
 	}
@@ -18,18 +18,31 @@ namespace vsite::oop::v2
 		return blue;
 	}
 
-	//set
+	//*******set********
 	void color::set_red(double value) {
-		red = value;
+		red = std::clamp(value, 0., 1.);
 	}
 	void color::set_blue(double value) {
-		blue = value;
+		blue = std::clamp(value, 0., 1.);
 	}
 	void color::set_green(double value) {
-		green = value;
+		green = std::clamp(value, 0., 1.);
+	}
+
+	//*******color ref*******
+	unsigned color::get_color_ref() {
+		red = red * 255;
+		green = green * 255;
+		blue = blue * 255;
+
+		return RGB(red, green, blue);
+	}
+
+	//********get luminance*******
+	double color::get_luminance(){
+		return 0.2126 * red + 0.7152 * green + 0.0722 * blue;
 	}
 
 
 } // namespace
 
-//clamp funkcija za broj izmedju danih vrijednosti
