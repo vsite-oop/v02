@@ -11,7 +11,7 @@ namespace vsite::oop::v2
 {
     std::string to_hex(int a);
     class color{
-        double red,green,blue=0;
+        double red=0,green=0,blue=0;
         public:
           double get_red()const;
           double get_green()const;

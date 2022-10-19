@@ -27,7 +27,7 @@ namespace vsite::oop::v2
         void color::set_blue(double a){
             blue=std:clamp(a,0.0,1.0);
         }
-        uint32_t color::get_color_ref(){
+        uint32_t color::get_color_ref()const{
             return RGB(red*255,green*255,blue*255);
         }
         double color::get_luminance()const{
