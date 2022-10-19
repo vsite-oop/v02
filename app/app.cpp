@@ -30,16 +30,12 @@ namespace vsite::oop::v2
 	}
 
 	//*******color ref*******
-	unsigned color::get_color_ref() {
-		red = red * 255;
-		green = green * 255;
-		blue = blue * 255;
-
-		return RGB(red, green, blue);
+	unsigned color::get_color_ref() const{
+		return RGB(red * 255, green * 255, blue * 255);
 	}
 
 	//********get luminance*******
-	double color::get_luminance(){
+	double color::get_luminance() const{
 		return 0.2126 * red + 0.7152 * green + 0.0722 * blue;
 	}
 

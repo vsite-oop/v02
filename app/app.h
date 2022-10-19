@@ -26,11 +26,11 @@ namespace vsite::oop::v2
 		void set_blue(double value);
 
 		//*******color ref*******
-		unsigned get_color_ref();
+		unsigned get_color_ref() const;
 
 
 		//********get luminance*******
-		double get_luminance();
+		double get_luminance() const;
 	};
 
 }
