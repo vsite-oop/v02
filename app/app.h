@@ -24,7 +24,7 @@ namespace vsite::oop::v2
           uint32_t get_color_ref()const;
           double get_luminance()const;
 
-    }
+    };
 /*
 * class declaration
 */
