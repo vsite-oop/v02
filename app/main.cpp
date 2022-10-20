@@ -7,15 +7,15 @@ int main()
     vsite::oop::v2::color a;
     double x;
 
-    std::cout<<"Unesite RED: "
+    std::cout<<"Unesite RED: ";
     std::cin<<x;
     a.set_red(x);
 
-    std::cout<<"Unesite GREEN: "
+    std::cout<<"Unesite GREEN: ";
     std::cin<<x;
     a.set_green(x);
 
-    std::cout<<"Unesite BLUE: "
+    std::cout<<"Unesite BLUE: ";
     std::cin<<x;
     a.set_blue(x);
 
