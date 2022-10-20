@@ -17,9 +17,9 @@ namespace vsite::oop::v2
           double get_green()const;
           double get_blue()const;
 
-          double set_red(double a);
-          double set_green(double a);
-          double set_blue(double a);
+          void set_red(double a);
+          void set_green(double a);
+          void set_blue(double a);
 
           uint32_t get_color_ref()const;
           double get_luminance()const;
