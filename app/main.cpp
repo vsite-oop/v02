@@ -8,18 +8,18 @@ int main()
     double x;
 
     std::cout<<"Unesite RED: ";
-    std::cin<<x;
+    std::cin>>x;
     a.set_red(x);
 
     std::cout<<"Unesite GREEN: ";
-    std::cin<<x;
+    std::cin>>x;
     a.set_green(x);
 
     std::cout<<"Unesite BLUE: ";
-    std::cin<<x;
+    std::cin>>x;
     a.set_blue(x);
 
-    std::cout<<"RGB hex color: "<<vsite::oop::v2::to_hex(a.get_color_ref();
+    std::cout<<"RGB hex color: "<<vsite::oop::v2::to_hex(a.get_color_ref());
 
 
 }

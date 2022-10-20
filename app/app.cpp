@@ -19,13 +19,13 @@ namespace vsite::oop::v2
             return blue;
         }
         void color::set_red(double a){
-           red=std:clamp(a,0.0,1.0);
+           red=std::clamp(a,0.0,1.0);
         }
         void color::set_green(double a){
-            green=std:clamp(a,0.0,1.0);
+            green=std::clamp(a,0.0,1.0);
         }
         void color::set_blue(double a){
-            blue=std:clamp(a,0.0,1.0);
+            blue=std::clamp(a,0.0,1.0);
         }
         uint32_t color::get_color_ref()const{
             return RGB(red*255,green*255,blue*255);
