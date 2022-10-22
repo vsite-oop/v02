@@ -121,7 +121,7 @@ namespace all_tests
 			e.set_blue(0.5);
 			Assert::AreEqual(RGB(127, 127, 127), e.get_color_ref());
 		}
-
+		
 		TEST_METHOD(test_conversion_luminance)
 		{
 			color a;
