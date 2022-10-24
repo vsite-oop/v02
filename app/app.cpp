@@ -1,5 +1,7 @@
 #include "app.h"
 #include <algorithm>
+#include<iomanip>
+#include<format>
 
 //clamp
 //std::clamp(n,0,255)
@@ -20,21 +22,25 @@ namespace vsite::oop::v2
 			return blue;
 		}
 
+		double low = 0.f;
+		double high = 1.f;
+
 		void color::set_red(double r) {
-			red = r;
+			red = std::clamp(r, low, high);
 		}
 		void color::set_green(double g) {
-			green = g;
+			green = std::clamp(g, low, high);
 		}
 		void color::set_blue(double b) {
-			blue = b;
+			blue = std::clamp(b, low, high);
 		}
 
 		uint32_t color::get_color_ref() const{
-			return 22;
+			return RGB(red*255, green*255, blue*255);
+			
 		}
 		double color::get_luminance() const{
-			return 0.;
+			return (0.2126 * red + 0.7152 * green + 0.0722 * blue);
 		}
 
 } // namespace

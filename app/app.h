@@ -14,9 +14,9 @@ namespace vsite::oop::v2
 
 	class color {
 	private:
-		double red = 0.;
-		double green = 0.;
-		double blue = 0.;
+		double red = 0.f;
+		double green = 0.f;
+		double blue = 0.f;
 
 	public:
 		double get_red() const;
