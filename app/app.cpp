@@ -1,16 +1,17 @@
 #include "app.h"
 #include <algorithm>
+#include <format>  // For std::format
 
 namespace vsite::oop::v2
 {
 /*
 * class member function implementations
 */
-	double color::get_red() const{  // povratni_tip naziv_klase::naziv_metode()
+	double color::get_red() const{  // return_type class_name::method_name()
 		return red;
 	}
 
-	double color::get_green() const{  // Slajd 20 (C++ implementacija)
+	double color::get_green() const{  // Slide 20 (C++ implementacija)
 		return green;
 	}
 
@@ -19,7 +20,7 @@ namespace vsite::oop::v2
 	}
 
 	void color::set_red(double n) {
-		red = std::clamp(n, 0.0, 1.0);  // Mogu i jednostavno napisati red = n ali onda neæe raditi testovi 3-5. Clamp ugura vrijednost u zadane granice ako je izvan.
+		red = std::clamp(n, 0.0, 1.0);  // Shorter alternative would be "red = n", but in that case tests 3-5 won't work. Clamp squeezes value inside defined limits if its outside of them.
 	}
 
 	void color::set_green(double n) {
@@ -36,6 +37,10 @@ namespace vsite::oop::v2
 
 	double color::get_luminance() const {
 		return red * 0.2126 + green * 0.7152 + blue * 0.0722;
+	}
+
+	std::string to_hex(int n) {  // Function from repository v01
+		return std::format("{:X}", n);
 	}
 
 } // namespace

@@ -4,6 +4,8 @@
 // from <windows.h>
 #define RGB(r,g,b) ((uint32_t)(((uint8_t)(r)|((uint16_t)((uint8_t)(g))<<8))|(((uint32_t)(uint8_t)(b))<<16)))
 
+#include <sstream>;  // For std::string
+
 namespace vsite::oop::v2
 {
 /*
@@ -27,5 +29,8 @@ namespace vsite::oop::v2
 
 		double get_luminance() const;
 	};
+
+
+	std::string to_hex(int n);  // Function from repository v01
 
 }
