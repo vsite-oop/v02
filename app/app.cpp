@@ -12,15 +12,15 @@ namespace vsite::oop::v2
 	}
 	void color::set_red(double broj)
 	{
-		red = std::clamp(broj, 0.0, 100.0);
+		red = std::clamp(broj, 0.0, 1.0);
 	}
 	void color::set_green(double broj)
 	{
-		green = std::clamp(broj, 0.0, 100.0);
+		green = std::clamp(broj, 0.0, 1.0);
 	}
 	void color::set_blue(double broj)
 	{
-		blue = std::clamp(broj, 0.0, 100.0);
+		blue = std::clamp(broj, 0.0, 1.0);
 	}
 	double color::get_red() const
 	{
