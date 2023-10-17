@@ -11,18 +11,12 @@ namespace vsite::oop::v2
 /*
 * class member function implementations
 */
-    std::string color::to_hex() {
-        std::stringstream ss;
-        ss << "0x" << std::hex;
-        ss << std::setfill('0') << std::setw(2) << xr;
-        ss << std::setfill('0') << std::setw(2) << xg;
-        ss << std::setfill('0') << std::setw(2) << xb;
-        ss << std::endl;
-        return ss.str();
+    std::string to_hex(int num) {
+        return std::format("{:X}", num);
     }
 
     uint32_t color::get_color_ref() const {        
-        return RGB(xr, xg, xb);
+        return RGB(red*255, green*255, blue*255);
     }
 
     double color::get_luminance() {

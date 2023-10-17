@@ -4,21 +4,24 @@
 #include <ostream>
 #include <iostream>
 using vsite::oop::v2::color;
+using vsite::oop::v2::to_hex;
 
 int main()
 {
-    color c;
-    
-    std::cout << "Unesite vrijednosti (0-1): \n";
+    int red;
+    int green;
+    int blue;
+
+    std::cout << "Unesite vrijednosti (0-255): \n";
 
     std::cout << "Crvena: ";
-    c.set_red(std::cin);
+    std::cin >> red;
 
     std::cout << "Zelena: ";
-    c.set_green(std::cin);
+    std::cin >> green;
 
     std::cout << "Plava: ";
-    c.set_blue(std::cin);
+    std::cin >> blue;
 
-    std::cout << "Hex vrijednost upisane boje: " << c.to_hex();
+    std::cout << "Hex vrijednost upisane boje: " << "0x" << to_hex(red) << to_hex(green) << to_hex(blue);
 }
