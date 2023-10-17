@@ -12,7 +12,7 @@ namespace vsite::oop::v2
 * class member function implementations
 */
     std::string to_hex(int num) {
-        return std::format("{:X}", num);
+        return std::format("{:06X}", num);
     }
 
     uint32_t color::get_color_ref() const {        
