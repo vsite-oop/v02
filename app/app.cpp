@@ -12,41 +12,26 @@ namespace vsite::oop::v2
 	}
 	void color::set_red(double broj)
 	{
-		red = broj;
+		red = std::clamp(broj, 0.0, 100.0);
 	}
 	void color::set_green(double broj)
 	{
-		green = broj;
+		green = std::clamp(broj, 0.0, 100.0);
 	}
 	void color::set_blue(double broj)
 	{
-		blue = broj;
+		blue = std::clamp(broj, 0.0, 100.0);
 	}
 	double color::get_red() const
 	{
-		if (red < 0)
-			return 0.0;
-		else if(red > 1)
-			return 1;
-		else
 			return red;
 	}
 	double color::get_blue() const 
 	{
-		if (blue < 0)
-			return 0.0;
-		else if (blue > 1)
-			return 1;
-		else
 			return blue;
 	}
 	double color::get_green() const
 	{
-		if (green < 0)
-			return 0.0;
-		else if (green > 1)
-			return 1;
-		else
 			return green;
 	}
 	double color::get_luminance()
@@ -67,5 +52,10 @@ namespace vsite::oop::v2
 			b = 0;
 		return ((uint32_t)r) | (((uint32_t)g) << 8) | (((uint32_t)b) << 16);
 	}
+	std::string to_hex(int broj) {
+		std::string x = std::format("{:0X}", broj);
+		return x;
+	}
 }
+	
 // namespace
