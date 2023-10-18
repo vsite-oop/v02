@@ -39,16 +39,14 @@ namespace vsite::oop::v2
 	}
 	double color::get_luminance() const 
 	{
-		double y = 0.2126 * r + 0.7152 * g + 0.0722 * b;
-		return y;
+		return 0.2126 * r + 0.7152 * g + 0.0722 * b;
 	}
 	uint32_t color::get_color_ref() const
 	{
-		return RGB(r*255 , g*255 , b*255 );
+		return RGB(b*255 , g*255 , r*255 );
 	}
 	std::string to_hex(int broj) {
-		std::string x = std::format("{:06X}", broj);
-		return x;
+		return std::format("{:06X}", broj);
 	}
 }
 	
