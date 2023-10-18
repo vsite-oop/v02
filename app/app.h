@@ -9,9 +9,9 @@ namespace vsite::oop::v2
 {
 	class color {
     private:
-        double red;
-        double green;
-        double blue;
+        double r;
+        double g;
+        double b;
     public:
         color(double red = 0,double green = 0,double blue = 0);
         void set_red(double broj);
@@ -20,8 +20,8 @@ namespace vsite::oop::v2
         double get_red() const;
         double get_green() const;
         double get_blue() const;
-        uint32_t get_color_ref();
-        double get_luminance();
+        uint32_t get_color_ref() const;
+        double get_luminance() const;
     
     };
     std::string to_hex(int broj);
