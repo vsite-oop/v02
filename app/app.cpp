@@ -15,17 +15,14 @@ namespace vsite::oop::v2
 	}
 	
 	void color::set_red(double x) {
-		x = x / 255;
 		red = std::clamp(x, 0.0, 1.0);
 	}
 
 	void color::set_green(double x) {
-		x = x / 255;
 		green = std::clamp(x, 0.0, 1.0);
 	}
 
 	void color::set_blue(double x) {
-		x = x / 255;
 		blue = std::clamp(x, 0.0, 1.0);
 	}
 			

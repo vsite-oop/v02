@@ -17,9 +17,9 @@ int main()
 
 	//Postavljanje vrijednosti
 	color c;
-	c.set_red(red);
-	c.set_green(green);
-	c.set_blue(blue);
+	c.set_red(red / 255);
+	c.set_green(green / 255);
+	c.set_blue(blue / 255);
 
 	//Ispis vrijednosti
 	std::cout << "Crvena: " << c.get_red() << std::endl;
