@@ -24,16 +24,13 @@ namespace vsite::oop::v2
 		return b;
 	}
 	void color::set_red(double c) {
-		double red = c / 255;
-		r = std::clamp(red, 0.0, 1.0);
+		r = std::clamp(c, 0.0, 1.0);
 	}
 	void color::set_green(double c) {
-		double green = c / 255;
-		g = std::clamp(green, 0.0, 1.0);
+		g = std::clamp(c, 0.0, 1.0);
 	}
 	void color::set_blue(double c) {
-		double blue = c / 255;
-		b = std::clamp(blue, 0.0, 1.0);
+		b = std::clamp(c, 0.0, 1.0);
 	}
 	std::string to_hex(int num) {
 		return std::format("{:06X}", num);

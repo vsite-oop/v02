@@ -16,9 +16,9 @@ int main()
 	std::cin >> blue;
 
 	color c;
-	c.set_red(red);
-	c.set_green(green);
-	c.set_blue(blue);
+	c.set_red(red / 255);
+	c.set_green(green / 255);
+	c.set_blue(blue / 255);
 
 	std::cout << "Crvena boja: " << c.get_red() << "\n";
 	std::cout << "Zelena boja: " << c.get_green() <<"\n";
