@@ -29,6 +29,7 @@ namespace vsite::oop::v2
             return green;
         }
         double get_blue() const {
+
             return blue;
         };
 
