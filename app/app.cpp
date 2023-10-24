@@ -28,37 +28,13 @@ namespace vsite::oop::v2
 		return blue;
 	}
 	void color::set_red(double red) {
-		if (red < 0.0) {
-			this->red = 0.0;
-		}
-		else if (red > 1.0) {
-			this->red = 1.0;
-		}
-		else {
-			this->red = red;
-		}
+		this->red = std::clamp(red, 0.0, 1.0);
 	}
 	void color::set_green(double green) {
-		if (green < 0.0) {
-			this->green = 0.0;
-		}
-		else if (green > 1.0) {
-			this->green = 1.0;
-		}
-		else {
-			this->green = green;
-		}
+		this->green = std::clamp(green, 0.0, 1.0);
 	}
 	void color::set_blue(double blue) {
-		if (blue < 0.0) {
-			this->blue = 0.0;
-		}
-		else if (blue > 1.0) {
-			this->blue = 1.0;
-		}
-		else {
-			this->blue = blue;
-		}
+		this->blue = std::clamp(blue, 0.0, 1.0);
 	}
 	uint32_t color::get_color_ref() const {
 		uint8_t r = static_cast<uint8_t>(red * 255);
