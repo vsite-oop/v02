@@ -8,12 +8,21 @@ namespace vsite::oop::v2
 /*
 * class member function implementations
 */
-	color::color(double red, double green, double blue) {
-		this->r = red;
-		this->g = green;
-		this->b = blue;
+	std::string to_hex(int num) {
+		return std::format("{:06X}", num);
 	}
 
+	
+	void color::set_red(double red) {
+		this->r = std::clamp(red, 0., 1.);
+	}
+	void color::set_green(double green) {
+		this->g = std::clamp(green, 0., 1.);
+	}
+	void color::set_blue(double blue) {
+		this->b = std::clamp(blue, 0., 1.);
+
+	}
 	double color::get_red() const {
 		return r;
 	}
@@ -23,18 +32,7 @@ namespace vsite::oop::v2
 	double color::get_blue() const {
 		return b;
 	}
-	void color::set_red(double red) {
-		this->r = std::clamp(red, 0., 1.);
-	}
-	void color::set_green(double green) {
-		this->g = std::clamp(green, 0., 1.);
-	}
-	void color::set_blue(double blue) {
-		this->b = std::clamp(blue, 0., 1.);
-	}
-	std::string to_hex(int num) {
-		return std::format("{:06X}", num);
-	}
+	
 	double color::get_luminance() const {
 		return r * 0.2126 + g * 0.7152 + b * 0.0722;
 	}

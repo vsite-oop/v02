@@ -18,8 +18,7 @@ int main()
 	std::cout << "Crvena boja: " << c.get_red() << "\n";
 	std::cout << "Zelena boja: " << c.get_green() << "\n";
 	std::cout << "Plava boja: " << c.get_blue() << "\n";
-
-	std::cout << '#' << std::setfill('0') << std::setw(6) << vsite::oop::v2::to_hex(r) + vsite::oop::v2::to_hex(g) + vsite::oop::v2::to_hex(b);
-
+	
+	std::cout << "Boja u hexadecimalnom  zapisu je 0x" << vsite::oop::v2::to_hex(c.get_color_ref());
 
 }
