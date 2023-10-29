@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <format>
 #include "app.h"
@@ -7,10 +6,8 @@
 
 int main()
 {
-
-using vsite::oop::v2::color;
-using vsite::oop::v2::to_hex;
-
+    using vsite::oop::v2::color;
+    using vsite::oop::v2::to_hex;
     color c;
 
     double blue;
