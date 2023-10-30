@@ -11,11 +11,8 @@ int main()
 	vsite::oop::v2::color c;
 	double R, G, B;
 	std::cin >> R;
-	std::clamp(R, 0.0, 1.0);
 	std::cin >> G;
-	std::clamp(G, 0.0, 1.0);
 	std::cin >> B;
-	std::clamp(B, 0.0, 1.0);
 	c.set_red(R);
 	c.set_green(G);
 	c.set_blue(B);

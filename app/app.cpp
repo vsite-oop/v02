@@ -1,10 +1,6 @@
 #include "app.h"
 #include <algorithm>
 #include<format>
-#ifndef RGB
-#define RGB(r,g,b) ((uint32_t)(((uint8_t)(r)|((uint16_t)((uint8_t)(g))<<8))|(((uint32_t)(uint8_t)(b))<<16)))
-#endif RGB
-
 
 
 
@@ -33,10 +29,10 @@ namespace vsite::oop::v2
 	double color::get_blue() const{
 		return B;
 	}
-	unsigned int color::get_color_ref() {
+	unsigned int color::get_color_ref() const{
 		return RGB(R*255, G*255, B*255);
 	}
-	double color::get_luminance() {
+	double color::get_luminance() const{
 		return(R*0.2126 + G*0.7152 + B*0.0722);
 	}
 	std::string to_hex(int n) {

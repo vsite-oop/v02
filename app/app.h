@@ -21,8 +21,8 @@ namespace vsite::oop::v2
 		double get_green() const;
 		double get_blue() const;
 
-		unsigned int get_color_ref();
-		double get_luminance();
+		unsigned int get_color_ref() const;
+		double get_luminance() const;
 	};
 	std::string to_hex(int n);
 
